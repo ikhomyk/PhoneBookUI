@@ -1,0 +1,63 @@
+<button mat-button class="back-button" (click)="close()">
+    <span class="material-icons">
+        arrow_back
+    </span>
+    Go Back
+</button>
+
+<div class="profile-container">
+    <form [formGroup]="contactForm" class="profile-form">
+        <mat-form-field>
+            <mat-label class="text-uppercase">
+                first name
+            </mat-label>
+            <input matInput id="firstName" formControlName="firstName" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label class="text-uppercase">
+                last name
+            </mat-label>
+            <input matInput id="lastName" formControlName="lastName" />
+        </mat-form-field>
+
+        <div class="row-field">
+            <mat-form-field>
+                <mat-label class="text-uppercase">
+                    phone number
+                </mat-label>
+                <input matInput formControlName="phoneNumber" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label class="text-uppercase">
+                    Email
+                </mat-label>
+                <input matInput formControlName="instagram" />
+            </mat-form-field>
+
+            <div class="isFavorite">
+                <mat-label class="text-uppercase">
+                    Is Favorite:
+                </mat-label>
+                <mat-slide-toggle color="primary" formControlName="isFavorite">
+                </mat-slide-toggle>
+            </div>
+
+            <!-- <mat-form-field appearance="fill">
+                <mat-label>Type</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let item of contactTypes" [value]="item.number">
+                        {{item.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> -->
+        </div>
+
+        <div class="update-button">
+            <button class="btn text-uppercase" mat-button (click)="createContact()" [disabled]="contactForm.invalid">
+                add
+            </button>
+        </div>
+    </form>
+</div>

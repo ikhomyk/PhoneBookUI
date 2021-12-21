@@ -1,0 +1,27 @@
+<mat-card class="sign-in-container" *ngIf="!(user$ | async)">
+  <div class=context>
+    <div class="body">
+      <form [formGroup]="signInForm" class="sign-in-form">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="USERNAME" formControlName="username" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type="password" matInput placeholder="PASSWORD" formControlName="password" required>
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div class="forgot-password-button">
+      <button class="btn text-uppercase" mat-button>
+      </button>
+    </div>
+
+    <div class="sign-in-button">
+      <button class="btn text-uppercase" (click)="authenticate();" mat-button
+        [disabled]="signInForm.invalid || loading">
+        sign in
+      </button>
+    </div>
+  </div>
+</mat-card>

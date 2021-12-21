@@ -1,0 +1,66 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over">
+        <mat-toolbar>
+            <div>
+                <a>Phonebook</a>
+            </div>
+
+            <div>
+                <button mat-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+
+        <div class="sidebar-content-to-center">
+            <app-left-sidebar></app-left-sidebar>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar class="nav">
+            <div>
+                <button mat-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span class="title">
+                    Phonebook
+                </span>
+            </div>
+
+            <nav mat-tab-nav-bar>
+                <div class="navigation-center">
+                    <span class="active" mat-tab-link *ngFor="let route of routers" (click)="activeLink = route"
+                        [active]="activeLink == route" routerLink={{route.link}} routerLinkActive="active">
+                        {{route.name}}
+                    </span>
+                </div>
+            </nav>
+
+            <div>
+                <div class="right-sidebar">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                        {{authUserService.authUser.firstName}}
+                        {{authUserService.authUser.lastName}}
+                        <mat-icon>arrow_drop_down</mat-icon>
+                    </button>
+                </div>
+
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="editProfile()">
+                        <span>Edit profile</span>
+                    </button>
+
+                    <button mat-menu-item (click)="changePassword()">
+                        <span>Change password</span>
+                    </button>
+
+                    <button mat-menu-item (click)="confirm()">
+                        <span>Log out</span>
+                    </button>
+                </mat-menu>
+            </div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

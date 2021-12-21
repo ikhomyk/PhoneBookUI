@@ -1,0 +1,69 @@
+@import "../../../../../assets/colors.scss";
+
+mat-card {
+    background-color: transparent;
+    padding: 2%;
+    width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    display: block;
+    margin-top: 10%;
+    box-shadow: none;
+}
+
+.mat-card:not([class*="mat-elevation-z"]) {
+    box-shadow: none;
+}
+
+mat-form-field {
+    display: block;
+}
+
+.exoft-logo-image {
+    padding: 2%;
+    width: 100%;
+    padding-top: 20%;
+    height: 90%;
+}
+
+.sign-in-button {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    background-color: $secondaryColor;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    .btn {
+        font-size: 20px;
+        color: white;
+        border: medium none;
+        background-image: none;
+        background: transparent;
+        float: left;
+        background-color: transparent;
+        width: 100%;
+        border-radius: 5%;
+    }
+}
+
+.forgot-password-button {
+    color: $secondaryColor;
+    margin-top: 4%;
+    height: 50%;
+    padding: 5%;
+
+    .btn span {
+        border-bottom: 2px solid $secondaryColor;
+    }
+}
+
+.sign-in-form {
+    margin-top: 4%;
+    height: 50%;
+    padding: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}

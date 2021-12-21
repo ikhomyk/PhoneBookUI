@@ -1,0 +1,146 @@
+@import "../../../../../assets/colors.scss";
+mat-sidenav-container {
+  height: 100%;
+}
+
+.mat-drawer-container,
+.mat-drawer {
+  background-color: $backgroundColor;
+}
+
+nav span {
+  color: white;
+}
+
+mat-sidenav mat-toolbar {
+  color: white;
+}
+
+.mat-tab-header {
+  display: flex;
+}
+
+mat-sidenav {
+  background-color: $backgroundColor;
+  color: #323232;
+  width: 350px;
+  height: 100%;
+}
+
+mat-sidenav span mat-icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.navigation-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  animation-duration: 4s;
+}
+
+.mat-toolbar {
+  background-color: $secondaryColor;
+  justify-content: space-between;
+}
+
+::ng-deep .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  display: none;
+}
+
+
+.mat-button {
+  color: white;
+}
+
+.mat-icon-button {
+  color: white;
+  width: 100%;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .initials {
+    color: white;
+    font-size: 15px;
+  }
+}
+
+.sidebar-content-to-center {
+  display: flex;
+  justify-content: center;
+}
+
+.right-sidebar {
+  color: white;
+  display: -webkit-inline-box;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.user-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 100%;
+  padding: 50%;
+  width: 100%;
+}
+
+.mat-tab-label-active {
+  border-top: 5px solid $mainColor;
+}
+
+
+.nav{
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  animation-duration: 4s;
+  height: 60px;
+  align-items: center;
+  background-color: $secondaryColor;
+
+  .title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .right-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}

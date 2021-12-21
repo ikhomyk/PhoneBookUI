@@ -1,0 +1,18 @@
+@import "../assets/colors.scss";
+
+.mat-drawer-container,
+.mat-drawer {
+  background-color: #42474d;
+  overflow: hidden;
+}
+
+nav a {
+  color: white;
+}
+
+
+mat-sidenav-container {
+  height: 100%;
+  width: 100%;
+}
+

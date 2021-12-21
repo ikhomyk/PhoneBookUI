@@ -1,0 +1,35 @@
+<div class="edit-profile-container">
+    <div class="edit-profile-button">
+        <button mat-raised-button (click)="editProfile()">Edit</button>
+    </div>
+
+    <div class="body">
+        <div class="circle">
+            <div class="initials">
+                {{authUserService.authUser | initials}}
+            </div>
+        </div>
+
+        <div class="user-name">
+            {{authUserService.authUser.firstName}} {{authUserService.authUser.lastName}}
+        </div>
+        <div class="user">
+            <div class="user-info">
+                <span class="info-title">Email:</span>
+                {{authUserService.authUser.email}}
+            </div>
+    
+            <div class="user-info">
+                <span class="info-title">Phone Number:</span>
+                {{authUserService.authUser.phoneNumber}}
+            </div>
+    
+            <div class="user-info">
+                <span class="info-title">UserName:</span>
+                {{authUserService.authUser.userName}}
+    
+            </div>
+        </div>
+        
+    </div>
+</div>

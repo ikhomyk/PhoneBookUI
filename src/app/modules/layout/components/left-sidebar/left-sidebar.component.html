@@ -1,0 +1,56 @@
+<div class="sidebar-container">
+    <div class="all-content">
+        <div class="circle">
+
+            <div class="initials">
+                {{authUserService.authUser | initials}}
+            </div>
+        </div>
+
+        <div class="user">
+            <div class="user-name">
+                {{authUserService.authUser.firstName}}
+                {{authUserService.authUser.lastName}}
+            </div>
+
+            <div class="sidebar-button-column">
+                <button mat-raised-button (click)="editProfile()">Edit profile</button>
+            </div>
+
+            <!-- <div class="sidebar-button-column">
+                <button mat-raised-button (click)="changePassword()">Change password</button>
+            </div> -->
+
+            <div class="sidebar-button-column">
+                <button mat-raised-button (click)="confirm()">Log out</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="left-sidebar-sumary">
+                <span class="left-sidebar-sumary-white"><a
+                        class="left-sidebar-sumary-green">Total contacts:</a>
+                         {{authUserService.authUser.totalContacts}}
+                </span>
+            </div>
+
+            <div class="left-sidebar-sumary">
+                <span class="left-sidebar-sumary-white"><a
+                        class="left-sidebar-sumary-green">Favorite contacts:</a>
+                        {{authUserService.authUser.totalFavorite}}
+                </span>
+            </div>
+        </div>
+
+        <mat-sidenav-container class="sidebar-container">
+            <nav mat-tab-nav-bar>
+                <div class="left-sidebar-nav">
+                    <a class="active" mat-tab-link *ngFor="let route of routers" (click)="activeLink = route"
+                        [active]="activeLink == route" routerLink={{route.link}} routerLinkActive="active">
+                        {{route.name}}
+                    </a>
+                </div>
+            </nav>
+        </mat-sidenav-container>
+    </div>
+</div>

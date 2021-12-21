@@ -1,0 +1,54 @@
+<button mat-button class="back-button" (click)="onNoClick()">
+    <span class="material-icons">
+        arrow_back
+    </span>
+    Profile settings
+</button>
+
+<div class="profile-container">
+    <div class="image">
+        <div class="circle">
+            <div class="initials">
+                {{authUserService.authUser | initials}}
+            </div>
+        </div>
+    </div>
+
+    <form [formGroup]="profileForm" class="profile-form">
+        <mat-form-field class="example-full-width">
+            <mat-label class="text-uppercase">
+                first name
+            </mat-label>
+            <input matInput id="firstName" formControlName="firstName" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label class="text-uppercase">
+                last name
+            </mat-label>
+            <input matInput id="lastName" formControlName="lastName" />
+        </mat-form-field>
+
+        <div class="row-field">
+            <mat-form-field>
+                <mat-label class="text-uppercase">
+                    email address
+                </mat-label>
+                <input matInput formControlName="email" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label class="text-uppercase">
+                    phone number
+                </mat-label>
+                <input matInput formControlName="status" />
+            </mat-form-field>
+        </div>
+
+        <div class="update-button">
+            <button class="btn text-uppercase" mat-button (click)="updateUser()" [disabled]="profileForm.invalid">
+                save changes
+            </button>
+        </div>
+    </form>
+</div>

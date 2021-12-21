@@ -1,0 +1,20 @@
+@import "../../../../assets/colors.scss";
+
+.greeting-container {
+    background-color: $mainColor;
+    color: white;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 15px;
+    .all-greet {
+        padding: 10px;
+        
+        .main-greeting {
+            font-size: 30px;
+            display: flex;
+        }
+    }
+}
+
+.greet-important {
+    font-weight: 500;
+}
